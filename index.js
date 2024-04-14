@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin:["http://localhost:3000","https://deploy-mern-1whq.vercel.app","https://codeminds-backend.vercel.app"],
+        origin:["http://localhost:3000","https://deploy-mern-1whq.vercel.app","https://codeminds-backend.vercel.app","https://codeminds-frontend.vercel.app"],
         methods:["POST","GET","PUT","DELETE"],
         credentials:true,
     })
