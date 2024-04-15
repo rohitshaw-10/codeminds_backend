@@ -11,7 +11,11 @@ const courseRoutes = require("./routes/Course");
 const contactUs = require("./routes/ContactUs");
 const cookieParser = require("cookie-parser")
 const database = require("./config/database")
+const bodyParser = require("body-parser");
+const limit = 100 * 1024 * 1024; // 10MB
 
+app.use(bodyParser.json({ limit }));
+app.use(bodyParser.urlencoded({ limit, extended: true }));
 const cors = require("cors");
 const {cloudinaryConnect} = require("./config/cloudinary");
 const fileUpload = require("express-fileupload"); 
